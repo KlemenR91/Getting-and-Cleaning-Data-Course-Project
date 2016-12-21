@@ -83,7 +83,8 @@ tidySet2 <- aggregate(msData$subjectID + msData$activityID, msData, mean)
 #Add activity to 
 tidySet2 <- merge(tidySet2, activity_Labels, by='activityID', all.x=TRUE)
 
-
+#Save second tidy set
+write.table(tidySet2, "tidySet2.txt", row.name=FALSE)
 
 
 
